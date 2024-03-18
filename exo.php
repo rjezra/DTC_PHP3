@@ -1,32 +1,36 @@
 <?php
-
 $annonces = [];
-
+function help()
+{
+    $listeActions = ["Add => Ajout l'annonce", "liste => Liste d'annonce"];
+    foreach ($listeActions as $listeAction) {
+        echo "- $listeAction \n";
+    }
+}
 function ajouterAnnonce(&$annonces)
 {
-    $titre = readline("Entrez le titre de l'annonce: ");
+    $titre = readline("Entrez le titre d'annonce: ");
     $type = readline("Entrez le type d'annonce: ");
-    $prix = readline("Entrez le prix: ");
+    $prix = readline("Entrez le prix d'annonce: ");
     $annonces[] = [$titre, $type, $prix];
-    echo "\n";
 }
-
-while (true) {
-    $action = readline("Entrez votre action: ");
-    if ($action === "help") {
-        $listeActions = ["Add => Ajour l'annonce", "liste =>Liste Annonce"];
-        foreach ($listeActions as $listeAction) {
-            echo "- $listeAction \n";
-        }
+function listeAnnonce($annonces)
+{
+    foreach ($annonces as $key => $annonce) {
+        echo "Annonce " . ($key + 1) . "\n";
+        echo "Titre: " . $annonce[0] . "\n";
+        echo "Type: " . $annonce[1] . "\n";
+        echo "Prix: " . $annonce[2] . "\n";
     }
-    if ($action === "Add") {
+}
+while (true) {
+    $action = readline("Entre votre action: ");
+    if ($action === "help") {
+        help();
+    }
+    if ($action === "add") {
         ajouterAnnonce($annonces);
     } elseif ($action === "liste") {
-        foreach ($annonces as $key => $annonce) {
-            echo "Annonce " . ($key + 1) . ":\n";
-            echo "Titre: " . $annonce[0] . "\n";
-            echo "Type: " . $annonce[1] . "\n";
-            echo "Prix: " . $annonce[2] . "\n\n";
-        }
+        listeAnnonce($annonces);
     }
 }
