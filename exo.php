@@ -1,11 +1,8 @@
 <?php
-
-declare(strict_types=1);
 $connexion = mysqli_connect("localhost", "root", "", "projet_php");
 if (!$connexion) {
     die("Impossible de se connecter");
 }
-
 
 $annonces = [];
 function help()
@@ -20,8 +17,10 @@ function ajouterAnnonce(&$annonces, &$connexion)
     $titre = readline("Entrez le titre d'annonce: ");
     $type = readline("Entrez le type d'annonce: ");
     $prix = readline("Entrez le prix d'annonce: ");
-
+    $titre = str_replace('"', '\"', $titre);
+    $type = str_replace('"', '\"', $type);
     $sql = sprintf('INSERT INTO annonces (titre, typ, prix) VALUES("%s", "%s", %d)', $titre, $type, $prix);
+    print_r($sql);
     if (mysqli_query($connexion, $sql)) {
         echo "Ajout annonce OK.\n";
     } else {
@@ -56,7 +55,6 @@ function updateAnnonce($connexion)
         echo "Annonce non trouvée.\n";
         return;
     }
-    $ligne = mysqli_fetch_assoc($result);
     $titreM = readline("Entrez le nouveau titre de l'annonce: ");
     $typeM = readline("Entrez le nouveau type de l'annonce: ");
     $prixM = readline("Entrez le nouveau prix de l'annonce: ");
@@ -80,8 +78,8 @@ function deleteAnnonce($connexion)
 }
 function selectAnnonce($connexion)
 {
-    $type = readline("Entre le type d'annonce rechercher: ");
-    $sql = "SELECT * FROM annonces WHERE typ ='$type'";
+    $type = readline("Entre le type et titre d'annonce rechercher: ");
+    $sql = "SELECT * FROM annonces WHERE typ LIKE '%$type%' OR titre LIKE '%$type%'";
     $result = mysqli_query($connexion, $sql);
     while ($ligne = mysqli_fetch_assoc($result)) {
         echo "Annonce " . $ligne['id'] . ": " . $ligne['titre'] . ' ' . $ligne['typ'] . ' ' . $ligne['prix'] . "\n";
