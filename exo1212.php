@@ -8,4 +8,4 @@ while ($line = fgetcsv($file, 1000, ";")) {
     $data[] = $rowData;
 }
 $jsonData = json_encode($data, JSON_PRETTY_PRINT);
-file_put_contents('output.json', $jsonData);
+file_put_contents('test.json', $jsonData);
