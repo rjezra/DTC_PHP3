@@ -2,10 +2,18 @@ Marque;Type;Moteur;Energie;Transmision;Couleur
 Toyota;Rav4;d4d;Essence;4*2;Rouge
 Toyota;v8;Turbo;Essence;4*4;Bleu
 Toyota;Txl;Turbo;Essence;4*5;Rouge
+Renault;Megan;Turbo;Essence;4*4;Gris
+Renault;Austral;CRDI;Essence;4*4;Vert
+Renault;Clio;Turbo;Essence;4*2;Bleu
 Renault;Dusteur;d4d;Essence;4*2;Rouge
 Peugeot;406;d4d;Essence;4*2;Bleu
 Peugeot;405;d4d;Essence;4*2;Noire
 Peugeot;504 familliale;d4d;Gasoil;4*2;Viole
 Peugeot;305;D4D;Essence;4*2;Noire
-Haval;Chevrol;d4d;Essence;4*5;Rouge
+Haval;H6;crdi;Essence;4*2;Jaune
+Haval;H9;d4d;Essence;4*5;Rouge
 Merced;K7;d4d;Essence;4*6;Rouge
+Merced;Sprinter;CDI;Gasoil;4*2;Rouge
+Merced;407;CDI;Gasoil;4*2;Orange
+Merced;408;CDI;Gasoil;4*2;Orange
+Merced;408;Turbo intercolect;Gasoil;4*2;Orange

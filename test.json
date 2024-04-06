@@ -25,6 +25,30 @@
     },
     {
         "Marque": "Renault",
+        "Type": "Megan",
+        "Moteur": "Turbo",
+        "Energie": "Essence",
+        "Transmision": "4*4",
+        "Couleur": "Gris"
+    },
+    {
+        "Marque": "Renault",
+        "Type": "Austral",
+        "Moteur": "CRDI",
+        "Energie": "Essence",
+        "Transmision": "4*4",
+        "Couleur": "Vert"
+    },
+    {
+        "Marque": "Renault",
+        "Type": "Clio",
+        "Moteur": "Turbo",
+        "Energie": "Essence",
+        "Transmision": "4*2",
+        "Couleur": "Bleu"
+    },
+    {
+        "Marque": "Renault",
         "Type": "Dusteur",
         "Moteur": "d4d",
         "Energie": "Essence",
@@ -57,15 +81,23 @@
     },
     {
         "Marque": "Peugeot",
-        "Type": "",
-        "Moteur": "",
-        "Energie": "",
-        "Transmision": "",
-        "Couleur": ""
+        "Type": "305",
+        "Moteur": "D4D",
+        "Energie": "Essence",
+        "Transmision": "4*2",
+        "Couleur": "Noire"
     },
     {
         "Marque": "Haval",
-        "Type": "Chevrol",
+        "Type": "H6",
+        "Moteur": "crdi",
+        "Energie": "Essence",
+        "Transmision": "4*2",
+        "Couleur": "Jaune"
+    },
+    {
+        "Marque": "Haval",
+        "Type": "H9",
         "Moteur": "d4d",
         "Energie": "Essence",
         "Transmision": "4*5",
@@ -78,5 +110,37 @@
         "Energie": "Essence",
         "Transmision": "4*6",
         "Couleur": "Rouge"
+    },
+    {
+        "Marque": "Merced",
+        "Type": "Sprinter",
+        "Moteur": "CDI",
+        "Energie": "Gasoil",
+        "Transmision": "4*2",
+        "Couleur": "Rouge"
+    },
+    {
+        "Marque": "Merced",
+        "Type": "407",
+        "Moteur": "CDI",
+        "Energie": "Gasoil",
+        "Transmision": "4*2",
+        "Couleur": "Orange"
+    },
+    {
+        "Marque": "Merced",
+        "Type": "408",
+        "Moteur": "CDI",
+        "Energie": "Gasoil",
+        "Transmision": "4*2",
+        "Couleur": "Orange"
+    },
+    {
+        "Marque": "Merced",
+        "Type": "408",
+        "Moteur": "Turbo intercolect",
+        "Energie": "Gasoil",
+        "Transmision": "4*2",
+        "Couleur": "Orange"
     }
 ]
