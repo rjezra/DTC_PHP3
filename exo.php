@@ -31,6 +31,10 @@ function retourAnonceVide($result, $retourAnonce)
         return;
     }
 }
+function dateValidation(&$date)
+{
+    $date = readline("Entre votre date: ");
+}
 function help()
 {
     $listeActions = ["Add => Ajout l'annonce", "liste => Liste d'annonce", "modif => modification annonce", "sup => suppression annonces", "select => selection annonce par type", "exit => exit de boucle"];
@@ -43,7 +47,9 @@ function ajouterAnnonce(&$annonces, &$connexion)
     inputValeur($titre, $type, $prix);
     echapeCaractere($titre);
     echapeCaractere($type);
-    $sql = sprintf('INSERT INTO annonces (titre, typ, prix) VALUES("%s", "%s", %d)', $titre, $type, $prix);
+    dateValidation($date);
+    $sql = sprintf('INSERT INTO annonces (titre, typ, prix, dateValidation) VALUES("%s", "%s", %d, "%s")', $titre, $type, $prix, $date);
+    var_dump($date);
     $retour = "Ajout annonce OK.\n";
     checkErreur($connexion, $sql, $retour);
 
